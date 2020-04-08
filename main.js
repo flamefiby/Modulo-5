@@ -87,4 +87,15 @@ function addNewTask() {
 
 
 
+// Third party API
+// The Twitter publish button function code below inspired by:
+// https://publish.twitter.com/?buttonType=HashtagButton&query=button&widget=Button
 
+
+let tweet = document.createElement('a');
+tweet.href = '\'https://twitter.com/share?ref_src=twsrc%5Etfw\'';
+tweet.setAttribute('class', 'twitter-share-button');
+tweet.setAttribute('data-show-count', 'false');
+tweet.textContent = 'Tweet';
+let div = document.querySelector('div');
+div.appendChild(tweet);
